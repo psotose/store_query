@@ -1,2 +1,19 @@
-<h1>Products#index</h1>
-<p>Find me in app/views/products/index.html.erb</p>
+
+<div class="container mb-5" >
+  <div class="row row-cols-1 row-cols-sm-1 row-cols-md-3" id="response">
+    <% @products.each do |product| %>
+      <div class="col mb-2">
+        <div class="card h-100" >
+            <div class="text-center">
+              <%= image_tag product.url_image, class:"card-img-top mt-2" if product.url_image != nil %>
+            </div>
+          <div class="card-body">
+            <h5 class="card-title"><%= product.name %></h5>
+            <p class="card-text"><%= product.price %></p>
+            <p class="card-text"><%= product.discount %></p>
+          </div>
+        </div>   
+      </div> 
+    <% end %>
+  </div>
+</div>
