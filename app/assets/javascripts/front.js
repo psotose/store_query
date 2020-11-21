@@ -39,7 +39,7 @@ function getProducts(category, name) {
           var product = `<div class="col mb-2">
           <div class="card h-100 border border-success">
           <div class="card-img-top">
-          <img src="${image}" class:"card-img-top mt-2" width="330" height="280"/>
+          <img src="${image}" class:"card-img-top" width="100%" height="280"/>
           </div>
           <div class="card-body">
           <h5 class="card-title">${element.name}</h5>
