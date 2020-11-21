@@ -1,4 +1,5 @@
 <div class="container my-4">
+  <!-- Se incluye la imágen aquí para que rails la disponibilice y poder llamarla con js, el atributo style con  display:none permite que no sea desplegada por el html.erb -->
   <%= image_tag 'image_not_available.png', id:"img_not_found", style:"display:none"%> <%= image_tag 'addcart.svg', id:"addcart", style:"display:none"%>
   <div class="row row-cols-1 row-cols-sm-1 row-cols-md-3" id="list_products"></div>
 </div>

@@ -6,10 +6,10 @@
         <option selected>Todas las categorías</option>
       </select>   
     </div>  
-      <form class="form-inline my-2 my-lg-0">
+      <div class="form-inline my-2 my-lg-0">
         <input id="name_product" class="form-control mr-sm-2" type="search" placeholder="Search" />
-        <button onclick="clickFind()"   class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fa fa-search"></i></button>
-      </form>
+        <button onclick="clickFind()" class="btn btn-outline-success my-2 my-sm-0" type="button"><i class="fa fa-search"></i></button>
+      </div>
     <div class="ml-2">
       <a class="navbar-brand" href="#">
         <img src="<%= image_url(asset_path('cart.svg'))%>" alt="Cart" style="height: 2em" />

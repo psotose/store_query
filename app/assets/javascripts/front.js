@@ -16,7 +16,7 @@ function loadData() {
 function clickFind() {
   var input = document.getElementById("name_product");
   var select = document.getElementById("categories_select");
-  getProducts(input.value, select.value);
+  getProducts(select.value, input.value);
 }
 
 function getProducts(category, name) {
@@ -26,6 +26,7 @@ function getProducts(category, name) {
       var div = document.getElementById("list_products");
       var imgNot = document.getElementById("img_not_found");
       var imgAdd = document.getElementById("addcart");
+      div.innerHTML = '';
       products.forEach((element) => {
         var image = imgNot.src;
         if (element.url_image && element.url_image != "") {
@@ -35,7 +36,7 @@ function getProducts(category, name) {
         var product = `<div class="col mb-2">
         <div class="card h-100 border border-success">
           <div class="card-img-top">
-            <img src="${image}" class:"card-img-top mt-2" width="330" height="300"/>
+            <img src="${image}" class:"card-img-top mt-2" width="330" height="280"/>
           </div>
           <div class="card-body">
             <h5 class="card-title">${element.name}</h5>
