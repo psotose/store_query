@@ -12,9 +12,9 @@ class ProductsController < ApplicationController
 
   def all_products
     products = nil
-    if (product_params[:category])
+    if (product_params[:category] && product_params[:category] != '')
       products = Product.where("category = #{(product_params[:category])}")
-    elsif (product_params[:name])  
+    elsif (product_params[:name] && product_params[:name] != '')  
       products = Product.where('name LIKE ?', "%#{product_params[:name]}%")
     else  
       products = Product.all

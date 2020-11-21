@@ -1,24 +1,3 @@
 <div class="container my-4">
-  <div class="row row-cols-1 row-cols-sm-1 row-cols-md-3" id="response">
-    <% @products.each do |product| %>
-    <div class="col mb-2">
-      <div class="card h-100 border border-success">
-        <div class="card-img-top"><%if product.url_image != nil && product.url_image != '' %> <%= image_tag product.url_image, size: "300x300", class:"card-img-top mt-2" %> <%else%> <%= image_tag 'image_not_available.png', size: "300x300", class:"card-img-top mt-2"%> <%end%></div>
-        <div class="card-body">
-          <h5 class="card-title"><%= product.name %></h5>
-        </div>
-        <div class="card-footer bg-white">
-          <div class="row">
-            <div class="col-8">
-              <p class="text-success font-weight-bold pt-3 pb-0 pl-4"><%= product.price %></p>
-            </div>
-            <div class="col-4">
-              <p class="pt-2"><img src="<%= image_url(asset_path('addcart.svg'))%>" alt="Add Product to Cart" style="height: 2em" /></p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <% end %>
-  </div>
+  <div class="row row-cols-1 row-cols-sm-1 row-cols-md-3" id="list_products"></div>
 </div>
